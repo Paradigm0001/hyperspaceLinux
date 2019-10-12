@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=FTL Hyperspace
+Comment=The FTL Hyperspace framework
+Exec=/usr/bin/wine ./FTLGame.exe
+Icon=./ftl.png
+Terminal=false
