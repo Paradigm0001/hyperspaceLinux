@@ -8,7 +8,7 @@ This shell script and its bundled resources will walk the user though the instal
 
 If there are any issues/suggestions, please make an issue ticket or DM me on discord at `Paradigm#0001`
 
-Credit to TheSwiftTiger, Winderps and ih8ih8sn0w for the hyperspace resources (Hyperspace.ftl, Hyperspace.dll and xinput1_4.dll)
+Credit to TheSwiftTiger, Winderps and ih8ih8sn0w for Hyperspace.ftl, Hyperspace.dll and xinput1_4.dll
 
 Discord Tags:\
 TheSwiftTiger#7324\
