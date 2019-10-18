@@ -1,4 +1,5 @@
 #!/bin/sh
+
 ### FTL Hyperspace walkthough script, Written by Paradigm#0001 (Discord Tag), Paradigm0001 (Github profile)
 
 ## Define vars
