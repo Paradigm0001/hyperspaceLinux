@@ -1,0 +1,18 @@
+#!/bin/sh
+exit 1
+
+## Dichotomize Steam and GOG versions
+As it stands, both GOG and Steam versions can be "Hyperspaced". However this script only operates with Steam.
+
+To get the GOG version to work, you have to download the windows installer from GOG and run it with wine (it works perfectly fine) and I could automate
+and walk a user though that easily.
+
+A backburner idea (which might come to life faster given demand) is to dichotomize the script into two (or a master that presents the option for one or the other).
+One version being for steam, other being GOG.
+
+The only thing holding me back is time and motovation, both easily changed however.
+
+## Reduce unnecessary dependencies
+The script doesnt REALLY need to have xclip as a dependency but it is commonly pre-installed in (or packaged for) mainstream distros.
+
+However, if and when their arises the moment someone lacks xclip or a means to obtain it, then I'll probs remove it as a dependency

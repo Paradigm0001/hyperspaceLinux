@@ -23,10 +23,11 @@ checkInstalled "xclip"
 checkInstalled "xdg-open" "xdg-utils"
 
 ## Enviroment check where we are
-## If we dont have the desktop file, exit
-ls | grep -q "Hyperspace.desktop" || error "Cannot find Hyperspace.desktop, likely an incorrect working directory!"
+## If we dont have the dll file, exit
+ls | grep -q "Hyperspace.dll" || error "Cannot find Hyperspace.dll, likely an incorrect working directory!"
 
 ## Link the Hyperspace desktop file to the users Desktop
+printf "[Desktop Entry]\nType=Application\nVersion=1.0.1\nEncoding=UTF-8\nName=FTL Hyperspace\nComment=The FTL Hyperspace executable\nExec=/usr/bin/wine $PWD/FTLGame.exe\nIcon=$PWD/resources/ftl.png\nTerminal=false" > Hyperspace.desktop
 ln -s "$PWD/Hyperspace.desktop" "$HOME/Desktop/" >/dev/null 2>&1
 
 ## Open the steam console with xdg-open and place the command string in the users clipboard
@@ -50,7 +51,7 @@ clear
 printf "Please follow the instructions in the following pictures.\nOnce you have completed all the steps in a picture, close the image preview and the next step will appear.\n\n"
 nohup winecfg >/dev/null 2>&1 &
 for i in 1 2 3 4 5; do
-	xdg-open ./docs/${i}.png
+	xdg-open ./resources/docs${i}.png
 done
 
 ## Create the "RUN_GAME.sh" script
