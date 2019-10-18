@@ -6,6 +6,6 @@
 This shell script and its bundled resources will walk the user (you) though the installation of FTL Hyperspace on Linux
 
 Do not download from the source, refer to the [releases page for download](https://github.com/Paradigm0001/hyperspaceLinux/releases).\
-The repo is constantly being force pushed and modified, making its consistancy questionable.
+The repo's source is constantly being force pushed and modified, making its consistancy questionable.
 
 If there are any issues/suggestions, please make an issue ticket or DM me on discord at `Paradigm#0001`
