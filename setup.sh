@@ -8,19 +8,13 @@ error() {
 	exit 1
 }
 checkInstalled() {
-	if [ "$#" -gt "1" ]; then
-		BINARY="$2"
-	else
-		BINARY="$1"
-	fi
-	[ -n "$(whereis $1 | cut -d: -f2)" ] || error "Cannot find $BINARY, Its likely not installed."
+	for $BINARY in $@; do
+		command -v "$BINARY" >/dev/null 2>&1 || error "Cannot find $BINARY, Its likely not installed."
+	done
 }
 
 ## Check if required software is installed
-checkInstalled "wine"
-checkInstalled "steam"
-checkInstalled "xclip"
-checkInstalled "xdg-open" "xdg-utils"
+checkInstalled "wine" "steam" "xclip" "xdg-open"
 
 ## Enviroment check where we are
 ## If we dont have the dll file, exit
@@ -37,9 +31,8 @@ printf 'Steam loading...\n'
 printf "Please enter the command \"download_depot 212680 212681 7584602879744021840\" into the steam console (No quotes)\nThe command should be copied into your clipboard already, if not then manually copy it.\n"
 
 ## Wait until user has entered the command, then continue when ready
-while true; do
+until [ "$RESPONCE" = "Ready" ]; do
 	read -p "Type \"Ready\" when the steam depot download completes: " RESPONCE
-	[ "$RESPONCE" = "Ready" ] && break
 done
 
 ## Copy the steam depo files to the current directory
