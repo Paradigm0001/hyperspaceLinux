@@ -17,7 +17,7 @@ done
 ls | grep -q "Hyperspace.dll" || error "Cannot find Hyperspace.dll, likely an incorrect working directory!"
 
 ## Link the Hyperspace desktop file to the users Desktop
-printf "[Desktop Entry]\nType=Application\nVersion=1.0.1\nEncoding=UTF-8\nName=FTL Hyperspace\nComment=The FTL Hyperspace executable\nExec=/usr/bin/wine $PWD/FTLGame.exe\nIcon=$PWD/resources/ftl.png\nTerminal=false" > Hyperspace.desktop
+printf "[Desktop Entry]\nType=Application\nVersion=1.1.1\nEncoding=UTF-8\nName=FTL Hyperspace\nComment=The FTL Hyperspace executable\nExec=/usr/bin/wine $PWD/FTLGame.exe\nIcon=$PWD/resources/ftl.png\nTerminal=false" > Hyperspace.desktop
 ln -s "$PWD/Hyperspace.desktop" "$HOME/Desktop/" >/dev/null 2>&1
 
 ## Open the steam console with xdg-open and place the command string in the users clipboard
