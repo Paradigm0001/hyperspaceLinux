@@ -2,21 +2,17 @@
 
 ### FTL Hyperspace walkthough script, Written by Paradigm#0001 (Discord Tag), Paradigm0001 (Github profile)
 
-## Define vars
+## Define functions
 error() {
-	printf "$1\nSetup will now abort.\n"
+	printf "\033[31m$1\nSetup will now abort.\033[0m\n"
 	exit 1
 }
-checkInstalled() {
-	for $BINARY in $@; do
-		command -v "$BINARY" >/dev/null 2>&1 || error "Cannot find $BINARY, Its likely not installed."
-	done
-}
-
 ## Check if required software is installed
-checkInstalled "wine" "steam" "xclip" "xdg-open"
+for BINARY in 'wine' 'steam' 'xclip' 'xdg-open'; do
+	command -v "$BINARY" >/dev/null 2>&1 || error "Cannot find $BINARY, Its likely not installed."
+done
 
-## Enviroment check where we are
+## Enviroment check
 ## If we dont have the dll file, exit
 ls | grep -q "Hyperspace.dll" || error "Cannot find Hyperspace.dll, likely an incorrect working directory!"
 
