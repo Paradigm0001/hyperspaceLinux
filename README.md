@@ -2,7 +2,7 @@
 ### `Currently broken!`
 Hyperspace requires a specific version of FTL to function however unfortunately the ability\
 to download specific depots from steam as been borked, leaving hyperspace stranded.
-
+#
 ### The Walkthough installer for FTL Hyperspace on Linux.
 
 #### This walkthough assumes you know how to use the slipstream mod manager, you download it from [here](https://subsetgames.com/forum/viewtopic.php?t=17102)
